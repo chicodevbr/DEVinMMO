@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../api/service';
-import DetailsList from '../components/GameDetails/DetailsList';
+import DetailsList from '../components/GameDetails/GameDetailsList';
 
 const GameDetails = () => {
   const { gameId } = useParams();
@@ -12,6 +12,7 @@ const GameDetails = () => {
     api.get('game', { params: { id: `${gameId}` } }).then((response) => {
       setGameDetails(response.data);
       console.log(response.data);
+      console.log(response.data.screenshots[0].image);
     });
   }, [gameId]);
 

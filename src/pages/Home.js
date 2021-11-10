@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import api from '../api/service';
 import GamesList from '../components/Games/GamesList';
+import SearchBar from '../components/Search/SearchBar';
+import { SearchBarContainer } from '../components/Search/SearchBarStyled';
 
 const Home = () => {
   const [games, setGames] = useState([]);
@@ -13,6 +15,9 @@ const Home = () => {
 
   return (
     <main>
+      <SearchBarContainer>
+        <SearchBar />
+      </SearchBarContainer>
       <GamesList items={games} />
     </main>
   );
