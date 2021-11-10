@@ -44,8 +44,7 @@ const GameItem = (props) => {
               background: 'transparent',
             }}
             onClick={() => {
-              history.push(`/game/${props.gameId}`);
-              console.log('clickou');
+              history.push(`/game/${props.id}`);
             }}
           >
             ver mais

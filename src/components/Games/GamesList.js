@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../UI/Card';
 import GameItem from './GameItem';
-import List from './List';
+import List from '../UI/List';
 
 const GamesList = (props) => {
   if (props.length === 0) {
