@@ -11,6 +11,10 @@ export const TitleGroup = styled.div`
   justify-content: space-between;
 `;
 
+export const Description = styled.div`
+  height: 15em;
+`;
+
 export const SpanTag = styled.span`
   width: 40%;
   height: 3em;

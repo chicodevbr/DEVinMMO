@@ -4,7 +4,7 @@ import Button from '../UI/Button';
 import { ButtonGroup } from '../UI/ButtonStyled';
 import Card from '../UI/Card';
 
-import { ItemList, TitleGroup } from './GameItemStyled';
+import { Description, ItemList, TitleGroup } from './GameItemStyled';
 
 const GameItem = (props) => {
   const history = useHistory();
@@ -33,9 +33,9 @@ const GameItem = (props) => {
             </Button>
           </ButtonGroup>
         </TitleGroup>
-        <div>
+        <Description>
           <p>{props.short_description} </p>
-        </div>
+        </Description>
         <ButtonGroup>
           <Button
             style={{
