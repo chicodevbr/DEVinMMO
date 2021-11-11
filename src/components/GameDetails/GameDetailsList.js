@@ -20,11 +20,26 @@ const DetailsList = (props) => {
       description={items.short_description}
       platform={items.platform}
       genre={items.genre}
-      /*os={items['minimum_system_requirements'].os}
-      processor={items['minimum_system_requirements'].processor}
-      memory={items['minimum_system_requirements'].memory}
-      graphics={items['minimum_system_requirements'].graphics}
-      storage={items['minimum_system_requirements'].storage}*/
+      os={
+        items['minimum_system_requirements'] &&
+        items['minimum_system_requirements'].os
+      }
+      processor={
+        items['minimum_system_requirements'] &&
+        items['minimum_system_requirements'].processor
+      }
+      memory={
+        items['minimum_system_requirements'] &&
+        items['minimum_system_requirements'].memory
+      }
+      graphics={
+        items['minimum_system_requirements'] &&
+        items['minimum_system_requirements'].graphics
+      }
+      storage={
+        items['minimum_system_requirements'] &&
+        items['minimum_system_requirements'].storage
+      }
     />
   );
 };

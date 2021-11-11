@@ -1,20 +1,21 @@
 import React from 'react';
 
 import Container from '../UI/Container';
-import { Content, Image, ImageBox, Title } from './GameDetailsItemStyled';
+import { Content, DetailsWrap, Image, ImageBox } from './GameDetailsItemStyled';
 import {
   InfoContainer,
   InfoContent,
   Paragraph,
   SubTitle,
 } from '../Games/GameItemStyled';
+import RequirementsList from './RequirementsList';
 
 const DetailsItem = (props) => {
   return (
     <Container>
-      <Title>
+      <DetailsWrap>
         <h1>{props.title}</h1>
-      </Title>
+      </DetailsWrap>
       <ImageBox>
         <Image src={props.image} alt={props.title} />
       </ImageBox>
@@ -33,6 +34,15 @@ const DetailsItem = (props) => {
         <h3>Description</h3>
         {props.description}
       </Content>
+      <DetailsWrap>
+        <RequirementsList
+          os={props.os}
+          processor={props.processor}
+          memory={props.memory}
+          graphics={props.graphics}
+          storage={props.storage}
+        />
+      </DetailsWrap>
     </Container>
   );
 };

@@ -1,33 +1,38 @@
 import React from 'react';
-import Box from '../UI/Box';
+
+import {
+  ListTitle,
+  RequirementsCard,
+  SubTitleRequirements,
+} from './GameDetailsItemStyled';
 
 const RequirementsList = (props) => {
   return (
-    <Box>
-      <h2>Requirements</h2>
+    <RequirementsCard>
+      <SubTitleRequirements>Requirements</SubTitleRequirements>
       <ul>
         <li>
-          <span>OS:</span>
+          <ListTitle>OS:</ListTitle>
           <span>{props.os}</span>
         </li>
         <li>
-          <span>Processor:</span>
+          <ListTitle>Processor:</ListTitle>
           <span>{props.processor}</span>
         </li>
         <li>
-          <span>Memory:</span>
+          <ListTitle>Memory:</ListTitle>
           <span>{props.memory}</span>
         </li>
         <li>
-          <span>Graphics:</span>
+          <ListTitle>Graphics:</ListTitle>
           <span>{props.graphics}</span>
         </li>
         <li>
-          <span>Storage:</span>
+          <ListTitle>Storage:</ListTitle>
           <span>{props.storage}</span>
         </li>
       </ul>
-    </Box>
+    </RequirementsCard>
   );
 };
 

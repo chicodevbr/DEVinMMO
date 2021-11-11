@@ -30,6 +30,19 @@ main {
 ul {
     list-style: none;
 }
+
+li {
+    margin-bottom: 0.25rem;
+}
+
+h2 {
+    margin: 2rem;
+}
+
+span {
+    margin-right: 5rem;
+    
+}
 `;
 
 export default GlobalStyle;
