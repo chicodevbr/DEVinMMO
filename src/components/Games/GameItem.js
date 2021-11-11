@@ -5,6 +5,7 @@ import { ButtonGroup } from '../UI/ButtonStyled';
 import Card from '../UI/Card';
 
 import { Description, ItemList, TitleGroup } from './GameItemStyled';
+import Platform from './Platform';
 
 const GameItem = (props) => {
   const history = useHistory();
@@ -18,20 +19,7 @@ const GameItem = (props) => {
         <TitleGroup>
           <h2>{props.title}</h2>
 
-          <ButtonGroup>
-            <Button
-              style={{
-                color: '#772DAE',
-                border: '1px solid #772DAE',
-                background: 'transparent',
-              }}
-              onClick={() => {
-                console.log('pc');
-              }}
-            >
-              {props.platform}
-            </Button>
-          </ButtonGroup>
+          <Platform platform={props.platform} />
         </TitleGroup>
         <Description>
           <p>{props.short_description} </p>
@@ -47,7 +35,7 @@ const GameItem = (props) => {
               history.push(`/game/${props.id}`);
             }}
           >
-            ver mais
+            more
           </Button>
         </ButtonGroup>
       </Card>
