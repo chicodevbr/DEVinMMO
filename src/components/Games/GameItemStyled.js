@@ -15,12 +15,23 @@ export const Description = styled.div`
   height: 15em;
 `;
 
-export const SpanTag = styled.span`
-  width: 40%;
-  height: 3em;
-  margin: 2px;
-  border: 2px solid #772dae;
-  border-radius: 10px;
-  color: white;
-  background: #772dae;
+export const InfoContainer = styled.div`
+  margin: 0.75rem 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+`;
+
+export const InfoContent = styled.div`
+  margin-right: 5rem;
+`;
+
+export const SubTitle = styled.h5`
+  margin-bottom: 2px;
+`;
+
+export const Paragraph = styled.p`
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 14px;
 `;

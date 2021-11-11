@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import GamesList from '../Games/GamesList';
 import Container from '../UI/Container';
-import { InputStyled, SearchBarContainer } from './SearchBarStyled';
+import {
+  InputStyled,
+  SearchBarContainer,
+  SubTitleFinder,
+} from './GameFinderStyled';
 
 const GamesFinder = (props) => {
   const [filterGames, setFilterGames] = useState(props.items);
@@ -13,14 +17,14 @@ const GamesFinder = (props) => {
         game.title.toLowerCase().includes(searchTerm)
       )
     );
-  }, [searchTerm]);
+  }, [searchTerm, props.items]);
 
   const searchChangeHandler = (event) => {
     setSearchTerm(event.target.value);
   };
 
   return (
-    <React.Fragment>
+    <Container>
       <SearchBarContainer>
         <InputStyled
           id={props.id}
@@ -28,11 +32,15 @@ const GamesFinder = (props) => {
           placeholder="search..."
           onChange={searchChangeHandler}
         />
+
+        {searchTerm && (
+          <SubTitleFinder>
+            Findings for "{searchTerm}" ({filterGames.length})
+          </SubTitleFinder>
+        )}
       </SearchBarContainer>
-      <Container>
-        <GamesList items={filterGames} />
-      </Container>
-    </React.Fragment>
+      <GamesList items={filterGames} />
+    </Container>
   );
 };
 

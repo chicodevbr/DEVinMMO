@@ -18,6 +18,8 @@ const DetailsList = (props) => {
       title={items.title}
       image={items.screenshots && items.screenshots[0].image}
       description={items.short_description}
+      platform={items.platform}
+      genre={items.genre}
       /*os={items['minimum_system_requirements'].os}
       processor={items['minimum_system_requirements'].processor}
       memory={items['minimum_system_requirements'].memory}

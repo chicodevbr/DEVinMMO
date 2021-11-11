@@ -11,8 +11,7 @@ const GameDetails = () => {
   useEffect(() => {
     api.get('game', { params: { id: `${gameId}` } }).then((response) => {
       setGameDetails(response.data);
-      console.log(response.data);
-      console.log(response.data.screenshots[0].image);
+      
     });
   }, [gameId]);
 
