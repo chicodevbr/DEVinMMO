@@ -1,37 +1,62 @@
 import React from 'react';
 
 import {
+  ListDescription,
   ListTitle,
   RequirementsCard,
   SubTitleRequirements,
+  TR,
 } from './GameDetailsItemStyled';
 
 const RequirementsList = (props) => {
   return (
     <RequirementsCard>
       <SubTitleRequirements>Requirements</SubTitleRequirements>
-      <ul>
-        <li>
-          <ListTitle>OS:</ListTitle>
-          <span>{props.os}</span>
-        </li>
-        <li>
-          <ListTitle>Processor:</ListTitle>
-          <span>{props.processor}</span>
-        </li>
-        <li>
-          <ListTitle>Memory:</ListTitle>
-          <span>{props.memory}</span>
-        </li>
-        <li>
-          <ListTitle>Graphics:</ListTitle>
-          <span>{props.graphics}</span>
-        </li>
-        <li>
-          <ListTitle>Storage:</ListTitle>
-          <span>{props.storage}</span>
-        </li>
-      </ul>
+
+      <table>
+        <tbody>
+          <TR>
+            <td>
+              <ListTitle>OS:</ListTitle>
+            </td>
+            <td>
+              <ListDescription>{props.os}</ListDescription>
+            </td>
+          </TR>
+          <TR>
+            <td>
+              <ListTitle>Processor:</ListTitle>
+            </td>
+            <td>
+              <ListDescription>{props.processor}</ListDescription>
+            </td>
+          </TR>
+          <TR>
+            <td>
+              <ListTitle>Memory:</ListTitle>
+            </td>
+            <td>
+              <ListDescription>{props.memory}</ListDescription>
+            </td>
+          </TR>
+          <TR>
+            <td>
+              <ListTitle>Graphics:</ListTitle>
+            </td>
+            <td>
+              <ListDescription>{props.graphics}</ListDescription>
+            </td>
+          </TR>
+          <TR>
+            <td>
+              <ListTitle>Storage:</ListTitle>
+            </td>
+            <td>
+              <ListDescription>{props.storage}</ListDescription>
+            </td>
+          </TR>
+        </tbody>
+      </table>
     </RequirementsCard>
   );
 };
