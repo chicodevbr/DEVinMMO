@@ -9,7 +9,8 @@ import {
   SubTitle,
 } from '../Games/GameItemStyled';
 import RequirementsList from './RequirementsList';
-import CarouselGameDetail from './Carousel/Carousel';
+import CarouselGameDetail from '../Carousel/Carousel';
+import Comments from '../Comments/Comments';
 
 const DetailsItem = (props) => {
   return (
@@ -48,6 +49,9 @@ const DetailsItem = (props) => {
           graphics={props.graphics}
           storage={props.storage}
         />
+      </DetailsWrap>
+      <DetailsWrap>
+        <Comments />
       </DetailsWrap>
     </Container>
   );
