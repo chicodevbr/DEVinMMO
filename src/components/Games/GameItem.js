@@ -4,17 +4,21 @@ import Button from '../UI/Button';
 import { ButtonGroup } from '../UI/ButtonStyled';
 import Card from '../UI/Card';
 
-import { Description, ItemList, TitleGroup } from './GameItemStyled';
+import { Description, Image, ItemList, TitleGroup } from './GameItemStyled';
 import Platform from './Platform';
 
 const GameItem = (props) => {
   const history = useHistory();
 
+  const clickHandler = () => {
+    history.push(`/game/${props.id}`);
+  };
+
   return (
     <ItemList>
-      <Card>
+      <Card onClick={clickHandler}>
         <div>
-          <img src={props.thumbnail} alt={props.title} />
+          <Image src={props.thumbnail} alt={props.title} />
         </div>
         <TitleGroup>
           <h2>{props.title}</h2>
@@ -31,9 +35,7 @@ const GameItem = (props) => {
               border: '1px solid #772DAE',
               background: 'transparent',
             }}
-            onClick={() => {
-              history.push(`/game/${props.id}`);
-            }}
+            onClick={clickHandler}
           >
             more
           </Button>

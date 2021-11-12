@@ -8,6 +8,7 @@ const CardStyled = styled.div`
   padding: 1rem;
   overflow: hidden;
   background: white;
+  cursor: pointer;
 `;
 
 export default CardStyled;

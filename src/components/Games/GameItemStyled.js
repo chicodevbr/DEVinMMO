@@ -9,6 +9,7 @@ export const TitleGroup = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  cursor: pointer;
 `;
 
 export const Description = styled.div`
@@ -34,4 +35,8 @@ export const Paragraph = styled.p`
   margin-top: 0;
   padding-top: 0;
   font-size: 14px;
+`;
+
+export const Image = styled.img`
+  cursor: pointer;
 `;
