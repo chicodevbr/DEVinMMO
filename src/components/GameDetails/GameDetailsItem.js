@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Container from '../UI/Container';
-import { Content, DetailsWrap, Image, ImageBox } from './GameDetailsItemStyled';
+import { Content, DetailsWrap, ImageBox } from './GameDetailsItemStyled';
 import {
   InfoContainer,
   InfoContent,
@@ -9,6 +9,7 @@ import {
   SubTitle,
 } from '../Games/GameItemStyled';
 import RequirementsList from './RequirementsList';
+import CarouselGameDetail from './Carousel/Carousel';
 
 const DetailsItem = (props) => {
   return (
@@ -17,7 +18,12 @@ const DetailsItem = (props) => {
         <h1>{props.title}</h1>
       </DetailsWrap>
       <ImageBox>
-        <Image src={props.image} alt={props.title} />
+        <CarouselGameDetail
+          image0={props.image0}
+          image1={props.image1}
+          image2={props.image2}
+          image3={props.image3}
+        />
       </ImageBox>
       <InfoContainer>
         <InfoContent>
