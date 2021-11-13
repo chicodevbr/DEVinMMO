@@ -1,6 +1,8 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
-import { useFormik } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
+import * as yup from 'yup';
 import {
   Form,
   FormFieldset,
@@ -11,88 +13,113 @@ import {
 import Input from '../UI/Input';
 import Button from '../UI/Button';
 import DisplayComments from './DisplayComments';
+import { ErrorComment } from './CommentStyled';
 
 const storageArr = JSON.parse(localStorage.getItem('comments')) || [];
 
-const Comments = (props) => {
-  const formik = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      comment: '',
-      date: new Date(),
-    },
-    onSubmit: (values) => {
-      let storage = {};
+const Comments = () => {
+  let location = useLocation();
 
-      storage.id = Date.now().toLocaleString();
-      storage.name = values.name;
-      storage.email = values.email;
-      storage.comment = values.comment;
-      storage.date = values.date;
+  const handleCommentSubmit = (values) => {
+    let storage = {};
 
-      storageArr.push(storage);
-      localStorage.setItem('comments', JSON.stringify(storageArr));
-      window.location.reload();
-    },
-  });
+    storage.id = Date.now().toLocaleString();
+    storage.name = values.name;
+    storage.email = values.email;
+    storage.comment = values.comment;
+    storage.gameLocation = location.pathname;
+    storage.count = 0;
+    storage.date = new Date();
+
+    storageArr.push(storage);
+    localStorage.setItem('comments', JSON.stringify(storageArr));
+    window.location.reload();
+  };
   return (
     <FormContainer>
-      <Form onSubmit={formik.handleSubmit}>
-        <h3>Comments</h3>
-        <FormHeader>
-          <FormFieldset>
-            <Input
-              element="input"
-              placeholder="Name"
-              type="text"
-              id="name"
-              name="name"
-              value={props.values}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
-          </FormFieldset>
-          <FormFieldset>
-            <Input
-              element="input"
-              placeholder="E-mail"
-              type="email"
-              id="email"
-              name="email"
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-            />
-          </FormFieldset>
-        </FormHeader>
+      <Formik
+        initialValues={{
+          game: '',
+          name: '',
+          email: '',
+          comment: '',
+        }}
+        validationSchema={commentSchema}
+        onSubmit={handleCommentSubmit}
+      >
+        {({ values, handleChange, handleSubmit, handleBlur, isSubmitting }) => (
+          <Form onSubmit={handleSubmit}>
+            <h3>Comments</h3>
+            <FormHeader>
+              <FormFieldset>
+                <Input
+                  element="input"
+                  placeholder="Name"
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={values.name}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <ErrorMessage component={ErrorComment} name="name" />
+              </FormFieldset>
+              <FormFieldset>
+                <Input
+                  element="input"
+                  placeholder="E-mail"
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <ErrorMessage component={ErrorComment} name="email" />
+              </FormFieldset>
+            </FormHeader>
 
-        <FormFieldset>
-          <Input
-            type="text"
-            id="comment"
-            name="comment"
-            placeholder="Write a comment"
-            style={{ height: '100px' }}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-        </FormFieldset>
-        <FormFooter>
-          <Button type="submit">Submit</Button>
-        </FormFooter>
-      </Form>
-      {storageArr.map((data) => {
-        return (
-          <DisplayComments
-            key={data.id}
-            name={data.name}
-            date={data.date}
-            comment={data.comment}
-          />
-        );
-      })}
+            <FormFieldset>
+              <Input
+                type="text"
+                id="comment"
+                name="comment"
+                values={values.comment}
+                placeholder="Write a comment"
+                style={{ height: '100px' }}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              <ErrorMessage component={ErrorComment} name="comment" />
+            </FormFieldset>
+            <FormFooter>
+              <Button type="submit" disabled={isSubmitting}>
+                Submit
+              </Button>
+            </FormFooter>
+          </Form>
+        )}
+      </Formik>
+      {storageArr &&
+        storageArr.map((data) => {
+          return data.gameLocation === location.pathname ? (
+            <DisplayComments
+              key={data.id}
+              name={data.name}
+              date={data.date}
+              comment={data.comment}
+              count={data.count}
+            />
+          ) : null;
+        })}
     </FormContainer>
   );
 };
 
 export default Comments;
+
+const commentSchema = yup.object().shape({
+  name: yup.string().required('This filed is required'),
+  email: yup.string().email().required('This filed is required'),
+  comment: yup.string().required('This filed is required'),
+});

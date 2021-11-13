@@ -25,3 +25,8 @@ export const ButtonComment = styled.button`
   background: transparent;
   cursor: pointer;
 `;
+
+export const ErrorComment = styled.div`
+  margin: 5px;
+  color: red;
+`;
