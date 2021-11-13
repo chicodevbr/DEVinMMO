@@ -13,3 +13,15 @@ export const NameStyled = styled.span`
 export const Paragraph = styled.p`
   font-size: 12px;
 `;
+
+export const CommentFooter = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const ButtonComment = styled.button`
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+`;
