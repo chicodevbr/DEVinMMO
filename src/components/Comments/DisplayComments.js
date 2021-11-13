@@ -1,15 +1,16 @@
 import React from 'react';
 import moment from 'moment';
+import { CommentContainer, NameStyled, Paragraph } from './ComentStyled';
 
 const DisplayComments = (props) => {
   return (
-    <div key={props.key}>
-      <p>
-        {props.name}
-        <span>{moment(props.date).fromNow()}</span>
-      </p>
+    <CommentContainer key={props.key}>
+      <Paragraph>
+        <NameStyled>{props.name}</NameStyled>
+        {moment(props.date).fromNow()}
+      </Paragraph>
       <p>{props.comment}</p>
-    </div>
+    </CommentContainer>
   );
 };
 
