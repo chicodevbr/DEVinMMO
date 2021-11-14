@@ -13,3 +13,9 @@ export const NewsContainer = styled.div`
 export const NewsSideContainer = styled.div`
   margin: 1rem;
 `;
+
+export const ImageNews = styled.img`
+  margin: 10px;
+  width: 350px;
+  height: 200px;
+`;

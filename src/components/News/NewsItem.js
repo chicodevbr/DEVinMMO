@@ -2,6 +2,7 @@ import React from 'react';
 import Card from '../UI/Card';
 import Button from '../UI/Button';
 import {
+  ImageNews,
   ListItemNews,
   NewsContainer,
   NewsSideContainer,
@@ -13,7 +14,7 @@ const NewsItem = (props) => {
     <ListItemNews>
       <Card>
         <NewsContainer>
-          <img src={props.image} alt={props.title} />
+          <ImageNews src={props.image} alt={props.title} />
 
           <NewsSideContainer>
             <h4>{props.title}</h4>

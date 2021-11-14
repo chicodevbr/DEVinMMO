@@ -18,7 +18,7 @@ const NewsList = (props) => {
         <NewsItem
           key={news.id}
           id={news.id}
-          image={news.thumbnail}
+          image={news.main_image}
           title={news.title}
           news={news.short_description}
           url={news.article_url}
