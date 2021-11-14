@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import api from '../api/service';
+import NewsList from '../components/News/NewsList';
 
 const News = () => {
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    api.get('latestnews').then((response) => {
+      setNews(response.data);
+    });
+  }, []);
+
   return (
-    <div>
-      <h2>News</h2>
-    </div>
+    <main>
+      <NewsList items={news} />
+    </main>
   );
 };
 
