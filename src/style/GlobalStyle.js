@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
 html{
     
     box-sizing: border-box;
+    margin: 0
     
 }
 
@@ -16,7 +17,7 @@ html{
 body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    margin: 0
+    
 }
 
 a {

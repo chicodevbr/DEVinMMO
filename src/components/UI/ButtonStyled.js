@@ -15,4 +15,5 @@ export const ButtonGroup = styled.div`
   flex-direction: column;
   justify-content: center;
   margin: 0.75em 0;
+  padding: 1rem;
 `;

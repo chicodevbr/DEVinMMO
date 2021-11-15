@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
 export const ItemList = styled.li`
-  margin: 1rem;
-  width: 25rem;
+  @media (min-width: 768px) {
+    margin: 1rem;
+    width: 30rem;
+  }
+  @media (min-width: 114px) {
+    margin: 1rem;
+    width: 25rem;
+  }
 `;
 
 export const TitleGroup = styled.div`
@@ -10,21 +16,27 @@ export const TitleGroup = styled.div`
   flex-direction: row;
   justify-content: space-between;
   cursor: pointer;
+  padding: auto 1rem;
 `;
 
 export const Description = styled.div`
-  height: 15em;
+  @media (min-width: 768px) {
+    height: 15em;
+    padding: 1rem;
+  }
 `;
 
 export const InfoContainer = styled.div`
-  margin: 0.75rem 5rem;
+  margin: 1rem 5rem;
+
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 `;
 
 export const InfoContent = styled.div`
-  margin-right: 5rem;
+  padding: 1rem;
+  margin: 1rem;
 `;
 
 export const SubTitle = styled.h5`
@@ -38,5 +50,7 @@ export const Paragraph = styled.p`
 `;
 
 export const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
   cursor: pointer;
 `;

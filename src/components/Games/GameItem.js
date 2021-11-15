@@ -17,9 +17,8 @@ const GameItem = (props) => {
   return (
     <ItemList>
       <Card onClick={clickHandler}>
-        <div>
-          <Image src={props.thumbnail} alt={props.title} />
-        </div>
+        <Image src={props.thumbnail} alt={props.title} />
+
         <TitleGroup>
           <h2>{props.title}</h2>
 

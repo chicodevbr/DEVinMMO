@@ -27,6 +27,6 @@ export const ButtonComment = styled.button`
 `;
 
 export const ErrorComment = styled.div`
-  margin: 5px;
+  margin: 2px;
   color: red;
 `;
