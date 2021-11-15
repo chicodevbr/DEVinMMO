@@ -9,7 +9,7 @@ const Button = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-right: 2rem;
+  margin-left: 2rem;
   cursor: pointer;
 
   @media (min-width: 768px) {
