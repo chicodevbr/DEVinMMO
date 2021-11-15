@@ -23,7 +23,7 @@ const MainHeader = (props) => {
     <React.Fragment>
       {drawIsOpen && <Backdrop onClick={closeDrawerHandler} />}
       <SideDrawer show={drawIsOpen} onClick={closeDrawerHandler}>
-        <NavLinks />
+        <NavLinks onClick={closeDrawerHandler} />
       </SideDrawer>
       <Header>
         <Menu onClick={openDrawerHandler} />

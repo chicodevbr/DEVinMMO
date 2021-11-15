@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const ItemList = styled.li`
+  margin: 0.75rem;
   @media (min-width: 768px) {
     margin: 1rem;
     width: 30rem;
   }
-  @media (min-width: 114px) {
+  @media (min-width: 1114px) {
     margin: 1rem;
     width: 25rem;
   }
@@ -17,10 +18,17 @@ export const TitleGroup = styled.div`
   justify-content: space-between;
   cursor: pointer;
   padding: auto 1rem;
+
+  @media (min-width: 768px) {
+    padding: auto 1rem;
+  }
 `;
 
 export const Description = styled.div`
+  font-size: 1.25rem;
+  padding: 1rem 0.75rem;
   @media (min-width: 768px) {
+    font-size: 1rem;
     height: 15em;
     padding: 1rem;
   }
@@ -37,6 +45,10 @@ export const InfoContainer = styled.div`
 export const InfoContent = styled.div`
   padding: 1rem;
   margin: 1rem;
+`;
+
+export const TitleItem = styled.h2`
+  font-size: 1rem;
 `;
 
 export const SubTitle = styled.h5`
