@@ -7,8 +7,6 @@ import NavLinks from './NavLinks';
 import Backdrop from '../UI/Backdrop';
 import SideDrawer from './SideDrawer';
 import Title from './Title';
-import ThemeToggle from '../Theme/ThemeToggle';
-import { BoxHeader } from './BoxHeader';
 
 const MainHeader = (props) => {
   const [drawIsOpen, setDrawerIsOpen] = useState(false);
@@ -32,12 +30,10 @@ const MainHeader = (props) => {
         <Title>
           <Link to="/">DEVinMMO</Link>
         </Title>
-        <BoxHeader>
-          <Nav>
-            <NavLinks />
-          </Nav>
-          <ThemeToggle />
-        </BoxHeader>
+
+        <Nav>
+          <NavLinks />
+        </Nav>
       </Header>
     </React.Fragment>
   );

@@ -9,8 +9,8 @@ const AsideStyled = styled.aside`
   top: 0;
   z-index: 100;
   height: 100vh;
-  width: 70%;
-  background: white;
+  width: 60%;
+  background: #f6683d;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 `;
 

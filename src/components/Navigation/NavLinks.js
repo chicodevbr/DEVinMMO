@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { NavLink } from 'react-router-dom';
+import ThemeToggle from '../Theme/ThemeToggle';
 
 import './NavLinks.css';
 
@@ -17,9 +19,7 @@ const NavLinks = (props) => {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/about" onClick={props.onClick}>
-          About
-        </NavLink>
+        <ThemeToggle />
       </li>
     </ul>
   );
