@@ -14,9 +14,14 @@ html{
     --border-radius: 5px;
 }
 
+
+
 body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
+    background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+    transition: all 0.25s linear;
     
 }
 

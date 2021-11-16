@@ -93,7 +93,11 @@ const Comments = () => {
               <ErrorMessage component={ErrorComment} name="comment" />
             </FormFieldset>
             <FormFooter>
-              <Button type="submit" disabled={isSubmitting}>
+              <Button
+                style={{ background: '#F6683D', color: 'white' }}
+                type="submit"
+                disabled={isSubmitting}
+              >
                 Submit
               </Button>
             </FormFooter>

@@ -6,7 +6,6 @@ const CardStyled = styled.div`
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: white;
   cursor: pointer;
 
   @media (min-width: 1145px) {
