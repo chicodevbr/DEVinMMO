@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import GamesList from '../Games/GamesList';
-import Container from '../UI/Container';
+
 import {
   InputStyled,
   SearchBarContainer,
   SubTitleFinder,
+  Container,
 } from './GameFinderStyled';
+
+import Search from '@spectrum-icons/workflow/Search';
+import { Flex } from '@react-spectrum/layout';
 
 const GamesFinder = (props) => {
   const [filterGames, setFilterGames] = useState(props.items);
@@ -26,12 +30,16 @@ const GamesFinder = (props) => {
   return (
     <Container>
       <SearchBarContainer>
-        <InputStyled
-          id={props.id}
-          type="search"
-          placeholder="search..."
-          onChange={searchChangeHandler}
-        />
+        <Flex gap="size-10">
+          <Search width={{ base: '20px' }} />
+
+          <InputStyled
+            id={props.id}
+            type="search"
+            placeholder="search..."
+            onChange={searchChangeHandler}
+          />
+        </Flex>
 
         {searchTerm && (
           <SubTitleFinder>

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const SearchBarContainer = styled.div`
+  width: 50%;
   margin: 2rem 5rem;
 `;
 
@@ -19,4 +20,11 @@ export const Line = styled.hr`
 
 export const SubTitleFinder = styled.h4`
   font-weight: 500;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
