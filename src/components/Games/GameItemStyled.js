@@ -26,10 +26,9 @@ export const TitleGroup = styled.div`
 `;
 
 export const Description = styled.div`
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   padding: 1rem 0.75rem;
   @media (min-width: 768px) {
-    font-size: 1rem;
     height: 15em;
     padding: 1rem;
   }
