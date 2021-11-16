@@ -11,10 +11,10 @@ const AppRoutes = () => {
     <BrowserRouter>
       <MainHeader />
       <Switch>
-        <Route exact path="/home" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/game/:gameId" component={GameDetails} />
         <Route path="/news" component={News} />
-        <Redirect to="/home" />
+        <Redirect to="/" />
       </Switch>
     </BrowserRouter>
   );

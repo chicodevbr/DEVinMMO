@@ -10,7 +10,7 @@ const HeaderStyled = styled.header`
   left: 0;
   background: #f6683d;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   z-index: 5;
 
   @media (min-width: 768px) {

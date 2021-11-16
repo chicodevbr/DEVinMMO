@@ -11,7 +11,7 @@ const Button = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: 2rem;
+
   cursor: pointer;
 
   @media (min-width: 768px) {

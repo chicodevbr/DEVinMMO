@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const SearchBarContainer = styled.div`
-  width: 50%;
-  margin: 2rem 5rem;
+  width: 40%;
+  margin: 1rem;
+  @media (min-width: 768px) {
+    margin: 2rem 5rem;
+  }
 `;
 
 export const InputStyled = styled.input`
