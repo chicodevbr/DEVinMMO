@@ -9,7 +9,6 @@ const ThemeToggle = () => {
     <ToggleButton
       staticColor={'white'}
       isQuiet
-      defaultSelected
       width={{ base: '30px' }}
       onClick={toggleTheme}
     >
