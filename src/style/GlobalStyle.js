@@ -50,6 +50,17 @@ span {
     margin-right: 5rem;
     
 }
+
+input {
+    color: inherit;
+    background: transparent;
+}
+
+textarea {
+    color: inherit;
+    background: transparent
+}
+
 `;
 
 export default GlobalStyle;

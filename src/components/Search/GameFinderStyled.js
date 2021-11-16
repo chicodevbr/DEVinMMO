@@ -8,7 +8,7 @@ export const InputStyled = styled.input`
   width: 100%;
   font: inherit;
   border: 1px solid #ccc;
-  background: #f8f8f8;
+  background: ${({ theme }) => theme.color.grayInput};
   padding: 0.15rem 0.25rem;
 `;
 

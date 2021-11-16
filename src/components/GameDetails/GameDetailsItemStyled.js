@@ -38,7 +38,7 @@ export const Content = styled.article`
 export const RequirementsCard = styled.div`
   width: 100%;
   height: 18rem;
-  background: #ccc;
+  background: ${({ theme }) => theme.color.grayBG};
   border: 1px solid gray;
   border-radius: 5px;
   padding: 1rem;

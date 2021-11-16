@@ -20,6 +20,7 @@ export const CommentFooter = styled.div`
 `;
 
 export const ButtonComment = styled.button`
+  color: inherit;
   border: none;
   outline: none;
   background: transparent;
