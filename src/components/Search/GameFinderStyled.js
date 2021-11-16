@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 export const SearchBarContainer = styled.div`
-  display: flex;
-  width: 50%;
+  display: none;
   margin: 1rem;
   @media (min-width: 768px) {
+    display: flex;
+    width: 50%;
     margin: 2rem 5rem;
   }
 `;
@@ -14,7 +15,6 @@ export const InputStyled = styled.input`
   font: inherit;
   border: 1px solid #ccc;
   background: ${({ theme }) => theme.color.grayInput};
-  padding: 0.15rem 0.25rem;
 `;
 
 export const Line = styled.hr`
