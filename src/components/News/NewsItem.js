@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from '../UI/Card';
-import Button from '../UI/Button';
+
+import './Button.css';
+
 import {
   ImageNews,
   ListItemNews,
@@ -20,15 +22,7 @@ const NewsItem = (props) => {
             <h4>{props.title}</h4>
             <p>{props.news}</p>
             <Link to={{ pathname: props.url }} target="_blank">
-              <Button
-                style={{
-                  color: '#772DAE',
-                  border: '1px solid #772DAE',
-                  background: 'transparent',
-                }}
-              >
-                Read More
-              </Button>
+              <button className="btn">Read More</button>
             </Link>
           </NewsSideContainer>
         </NewsContainer>

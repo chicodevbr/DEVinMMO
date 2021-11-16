@@ -1,0 +1,18 @@
+.btn {
+  font: inherit;
+  height: 2rem;
+  padding: 0.5rem 1.5rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #772dae;
+  color: #772dae;
+  background: transparent;
+}
+
+.btn:hover,
+.btn:active {
+  color: white;
+  background: #772dae;
+}
