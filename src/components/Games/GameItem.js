@@ -1,8 +1,8 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import Button from '../UI/Button';
 import { ButtonGroup } from '../UI/ButtonStyled';
 import Card from '../UI/Card';
+import './button.css';
 
 import { Description, Image, ItemList, TitleGroup } from './GameItemStyled';
 import Platform from './Platform';
@@ -28,16 +28,9 @@ const GameItem = (props) => {
           <p>{props.short_description} </p>
         </Description>
         <ButtonGroup>
-          <Button
-            style={{
-              color: '#772DAE',
-              border: '1px solid #772DAE',
-              background: 'transparent',
-            }}
-            onClick={clickHandler}
-          >
+          <button className="btn" onClick={clickHandler}>
             more
-          </Button>
+          </button>
         </ButtonGroup>
       </Card>
     </ItemList>
