@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ListNews = styled.ul`
-  margin: 10px;
   @media (min-width: 1145px) {
     display: flex;
     flex-direction: column;
