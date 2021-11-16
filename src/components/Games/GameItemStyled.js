@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const ItemList = styled.li`
   margin: 0.75rem;
+  width: 90vw;
   @media (min-width: 768px) {
     margin: 1rem;
     width: 30rem;

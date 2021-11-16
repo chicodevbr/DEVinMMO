@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const SearchBarContainer = styled.div`
-  width: 40%;
+  display: flex;
+  width: 50%;
   margin: 1rem;
   @media (min-width: 768px) {
     margin: 2rem 5rem;
