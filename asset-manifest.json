@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/DEVinMMO/static/css/main.1daf5f3a.chunk.css",
+    "main.js": "/DEVinMMO/static/js/main.d49f66a3.chunk.js",
+    "main.js.map": "/DEVinMMO/static/js/main.d49f66a3.chunk.js.map",
+    "runtime-main.js": "/DEVinMMO/static/js/runtime-main.9fc27704.js",
+    "runtime-main.js.map": "/DEVinMMO/static/js/runtime-main.9fc27704.js.map",
+    "static/css/2.c11dc5d0.chunk.css": "/DEVinMMO/static/css/2.c11dc5d0.chunk.css",
+    "static/js/2.4bd4e5d7.chunk.js": "/DEVinMMO/static/js/2.4bd4e5d7.chunk.js",
+    "static/js/2.4bd4e5d7.chunk.js.map": "/DEVinMMO/static/js/2.4bd4e5d7.chunk.js.map",
+    "index.html": "/DEVinMMO/index.html",
+    "static/css/2.c11dc5d0.chunk.css.map": "/DEVinMMO/static/css/2.c11dc5d0.chunk.css.map",
+    "static/css/main.1daf5f3a.chunk.css.map": "/DEVinMMO/static/css/main.1daf5f3a.chunk.css.map",
+    "static/js/2.4bd4e5d7.chunk.js.LICENSE.txt": "/DEVinMMO/static/js/2.4bd4e5d7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9fc27704.js",
+    "static/css/2.c11dc5d0.chunk.css",
+    "static/js/2.4bd4e5d7.chunk.js",
+    "static/css/main.1daf5f3a.chunk.css",
+    "static/js/main.d49f66a3.chunk.js"
+  ]
+}
