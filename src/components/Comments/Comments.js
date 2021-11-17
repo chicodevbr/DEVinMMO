@@ -41,7 +41,7 @@ const Comments = () => {
         validationSchema={commentSchema}
         onSubmit={handleCommentSubmit}
       >
-        {({ values, handleChange, handleSubmit, handleBlur, isSubmitting }) => (
+        {({ values, handleChange, handleSubmit, handleBlur }) => (
           <Form onSubmit={handleSubmit}>
             <FormFieldset>
               <h3>Comments</h3>

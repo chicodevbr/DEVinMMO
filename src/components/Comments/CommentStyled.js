@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
 export const CommentContainer = styled.div`
-  margin-top: 5rem;
+  margin: 3rem 1rem;
+  @media (min-width: 376px) {
+    margin: 1rem;
+  }
+  @media (min-width: 1145px) {
+    margin: 2rem 0;
+  }
 `;
 
 export const NameStyled = styled.span`

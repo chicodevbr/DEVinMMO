@@ -19,14 +19,12 @@ export const FieldsetStyled = styled.fieldset`
 `;
 
 export const FormContainerStyled = styled.div`
-  width: 300px;
-
-  @media (min-width: 380px) {
-    width: 370px;
+  margin: auto 1rem;
+  @media (min-width: 376px) {
+    margin: 1rem;
   }
-
   @media (min-width: 1145px) {
-    width: 600px;
+    margin: 1rem 5rem;
   }
 `;
 
