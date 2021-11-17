@@ -13,7 +13,7 @@ export const ButtonStyled = styled.button`
   cursor: pointer;
   :hover,
   :active {
-    background-color: gray;
+    background-color: ${({ theme }) => theme.color.hover};
     color: white;
   }
 `;
