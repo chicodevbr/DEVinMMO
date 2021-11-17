@@ -3,13 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import {
-  Form,
-  FormFieldset,
-  FormFooter,
-  FormContainer,
-  FormHeader,
-} from '../UI/Form';
+import { Form, FormFieldset, FormFooter, FormContainer } from '../UI/Form';
 import Input from '../UI/Input';
 import Button from '../UI/Button';
 import DisplayComments from './DisplayComments';
@@ -49,37 +43,32 @@ const Comments = () => {
       >
         {({ values, handleChange, handleSubmit, handleBlur, isSubmitting }) => (
           <Form onSubmit={handleSubmit}>
-            <h3>Comments</h3>
-            <FormHeader>
-              <FormFieldset>
-                <Input
-                  element="input"
-                  placeholder="Name"
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={values.name}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                <ErrorMessage component={ErrorComment} name="name" />
-              </FormFieldset>
-              <FormFieldset>
-                <Input
-                  element="input"
-                  placeholder="E-mail"
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={values.email}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                />
-                <ErrorMessage component={ErrorComment} name="email" />
-              </FormFieldset>
-            </FormHeader>
-
             <FormFieldset>
+              <h3>Comments</h3>
+              <Input
+                element="input"
+                placeholder="Name"
+                type="text"
+                id="name"
+                name="name"
+                value={values.name}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              <ErrorMessage component={ErrorComment} name="name" />
+
+              <Input
+                element="input"
+                placeholder="E-mail"
+                type="email"
+                id="email"
+                name="email"
+                value={values.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              <ErrorMessage component={ErrorComment} name="email" />
+
               <Input
                 type="text"
                 id="comment"
@@ -93,13 +82,7 @@ const Comments = () => {
               <ErrorMessage component={ErrorComment} name="comment" />
             </FormFieldset>
             <FormFooter>
-              <Button
-                style={{ background: '#F6683D', color: 'white' }}
-                type="submit"
-                disabled={isSubmitting}
-              >
-                Submit
-              </Button>
+              <Button type="submit">Submit</Button>
             </FormFooter>
           </Form>
         )}

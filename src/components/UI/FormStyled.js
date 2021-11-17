@@ -15,20 +15,13 @@ export const FormFooterStyled = styled.div`
 `;
 export const FieldsetStyled = styled.fieldset`
   width: 100%;
-
-  margin: 0px;
-
   border: none;
-
-  @media (min-width: 376px) {
-    margin: 0 10px;
-  }
 `;
 
 export const FormContainerStyled = styled.div`
-  width: 340px;
+  width: 300px;
 
-  @media (min-width: 376px) {
+  @media (min-width: 380px) {
     width: 370px;
   }
 
