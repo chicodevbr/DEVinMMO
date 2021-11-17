@@ -42,3 +42,10 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export const BoxSearchInput = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 280px;
+`;

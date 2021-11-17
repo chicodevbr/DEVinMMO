@@ -9,7 +9,7 @@ const NavLinks = (props) => {
   return (
     <ul className="nav-links">
       <li>
-        <NavLink to="/home" onClick={props.onClick}>
+        <NavLink to="/" onClick={props.onClick}>
           Games
         </NavLink>
       </li>

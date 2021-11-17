@@ -6,10 +6,10 @@ import {
   SearchBarContainer,
   SubTitleFinder,
   Container,
+  BoxSearchInput,
 } from './GameFinderStyled';
 
 import Search from '@spectrum-icons/workflow/Search';
-import { Flex } from '@react-spectrum/layout';
 
 const GamesFinder = (props) => {
   const [filterGames, setFilterGames] = useState(props.items);
@@ -30,7 +30,7 @@ const GamesFinder = (props) => {
   return (
     <Container>
       <SearchBarContainer>
-        <Flex gap="size-100">
+        <BoxSearchInput>
           <Search width={{ base: '20px' }} />
 
           <InputStyled
@@ -39,7 +39,7 @@ const GamesFinder = (props) => {
             placeholder="search..."
             onChange={searchChangeHandler}
           />
-        </Flex>
+        </BoxSearchInput>
 
         {searchTerm && (
           <SubTitleFinder>
