@@ -6,7 +6,8 @@ export const SearchBarContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
-  width: 70vh;
+  width: 80%;
+  height: auto;
 
   @media (min-width: 768px) {
     display: flex;
