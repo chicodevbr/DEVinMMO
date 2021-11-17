@@ -30,7 +30,7 @@ const GamesFinder = (props) => {
   return (
     <Container>
       <SearchBarContainer>
-        <Flex gap="size-10">
+        <Flex gap="size-100">
           <Search width={{ base: '20px' }} />
 
           <InputStyled
