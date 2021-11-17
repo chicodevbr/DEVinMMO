@@ -4,6 +4,8 @@ export const InputStyled = styled.input`
   font: inherit;
   width: 100%;
   border: 1px groove #ccc;
+
+  border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.26);
 
   @media (min-width: 768px) {
