@@ -11,7 +11,7 @@ const ThemeToggle = () => {
       <View backgroundColor="static-yellow-400" padding="size-50">
         <ToggleButton
           staticColor={'white'}
-          width={{ base: '35px' }}
+          width={{ base: '40px' }}
           onClick={toggleTheme}
         >
           {!isDark ? (
