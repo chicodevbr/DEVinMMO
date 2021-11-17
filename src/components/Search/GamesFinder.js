@@ -9,8 +9,6 @@ import {
   BoxSearchInput,
 } from './GameFinderStyled';
 
-import Search from '@spectrum-icons/workflow/Search';
-
 const GamesFinder = (props) => {
   const [filterGames, setFilterGames] = useState(props.items);
   const [searchTerm, setSearchTerm] = useState('');
@@ -31,8 +29,6 @@ const GamesFinder = (props) => {
     <Container>
       <SearchBarContainer>
         <BoxSearchInput>
-          <Search width={{ base: '20px' }} />
-
           <InputStyled
             id={props.id}
             type="search"
