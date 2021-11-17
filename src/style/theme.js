@@ -4,6 +4,7 @@ export const lightTheme = {
   color: {
     grayBG: '#ccc',
     grayInput: '#f8f8f8',
+    bar: '#f6683d',
   },
 };
 
@@ -12,5 +13,6 @@ export const darkTheme = {
   text: '#c9c9c9',
   color: {
     blackBG: '#3c3c3c',
+    bar: '#772dae',
   },
 };

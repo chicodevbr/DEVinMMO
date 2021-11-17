@@ -8,7 +8,7 @@ const HeaderStyled = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  background: #f6683d;
+  background: ${({ theme }) => theme.color.bar};
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
   padding: 0 0.5rem;
   z-index: 5;
