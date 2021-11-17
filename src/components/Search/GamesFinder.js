@@ -32,7 +32,7 @@ const GamesFinder = (props) => {
           <InputStyled
             id={props.id}
             type="search"
-            placeholder="search..."
+            placeholder=" search..."
             onChange={searchChangeHandler}
           />
         </BoxSearchInput>
