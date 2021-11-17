@@ -19,7 +19,7 @@ const NavLinks = (props) => {
         </NavLink>
       </li>
       <li>
-        <ThemeToggle />
+        <ThemeToggle onClick={props.onClick} />
       </li>
     </ul>
   );
