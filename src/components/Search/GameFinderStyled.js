@@ -4,10 +4,8 @@ export const SearchBarContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-bottom: 1rem;
   width: 80%;
-  height: auto;
 
   @media (min-width: 768px) {
     display: flex;
@@ -21,10 +19,14 @@ export const SearchBarContainer = styled.div`
 `;
 
 export const InputStyled = styled.input`
-  width: 100%;
+  width: 200px;
   font: inherit;
   border: 1px solid #ccc;
   background: ${({ theme }) => theme.color.grayInput};
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Line = styled.hr`
