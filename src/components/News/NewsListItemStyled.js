@@ -29,6 +29,7 @@ export const NewsContainer = styled.div`
 export const NewsSideContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0.75rem;
 `;
 

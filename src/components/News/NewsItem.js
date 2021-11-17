@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from '../UI/Card';
+import Button from '../UI/Button';
 
 import './Button.css';
 
@@ -22,7 +23,7 @@ const NewsItem = (props) => {
             <h4>{props.title}</h4>
             <p>{props.news}</p>
             <Link to={{ pathname: props.url }} target="_blank">
-              <button className="btn">Read More</button>
+              <Button>Read More</Button>
             </Link>
           </NewsSideContainer>
         </NewsContainer>

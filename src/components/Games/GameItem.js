@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { ButtonGroup } from '../UI/ButtonStyled';
 import Card from '../UI/Card';
+import Button from '../UI/Button';
 import './button.css';
 
 import { Description, Image, ItemList, TitleGroup } from './GameItemStyled';
@@ -28,9 +29,9 @@ const GameItem = (props) => {
           <p>{props.short_description} </p>
         </Description>
         <ButtonGroup>
-          <button className="btn" onClick={clickHandler}>
+          <Button className="btn" onClick={clickHandler}>
             more
-          </button>
+          </Button>
         </ButtonGroup>
       </Card>
     </ItemList>

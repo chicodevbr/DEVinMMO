@@ -5,9 +5,17 @@ export const ButtonStyled = styled.button`
   height: 2rem;
   padding: 0.5rem 1.5rem;
   text-transform: uppercase;
-  border: none;
+  color: white;
+  border: 1px solid;
+  border-color: ${({ theme }) => theme.color.bar};
   border-radius: 5px;
+  background: ${({ theme }) => theme.color.bar};
   cursor: pointer;
+  :hover,
+  :active {
+    background-color: gray;
+    color: white;
+  }
 `;
 
 export const ButtonGroup = styled.div`
