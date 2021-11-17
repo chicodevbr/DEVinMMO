@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ItemList = styled.li`
   margin: 0.75rem;
   width: 90vw;
+
   @media (min-width: 768px) {
     margin: 1rem;
     width: 30rem;
@@ -29,7 +30,7 @@ export const Description = styled.div`
   font-size: 1.2rem;
   padding: 1rem 0.75rem;
   @media (min-width: 768px) {
-    height: 15em;
+    height: 19em;
     padding: 1rem;
   }
 `;

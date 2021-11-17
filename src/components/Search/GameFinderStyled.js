@@ -1,10 +1,19 @@
 import styled from 'styled-components';
 
 export const SearchBarContainer = styled.div`
-  display: none;
-  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  width: 50%;
+
   @media (min-width: 768px) {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     width: 50%;
     margin: 2rem 5rem;
   }
