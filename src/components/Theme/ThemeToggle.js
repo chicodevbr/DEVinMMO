@@ -2,7 +2,7 @@ import React from 'react';
 import { useThemeToggle } from '../../context/AppThemeProvider';
 import { ToggleButton } from '@adobe/react-spectrum';
 
-import Moon from '@spectrum-icons/workflow/Moon';
+import { FaMoon } from 'react-icons/fa';
 
 const ThemeToggle = (props) => {
   const { toggleTheme } = useThemeToggle();
@@ -14,7 +14,7 @@ const ThemeToggle = (props) => {
       onClick={props.onClick}
       isQuiet
     >
-      <Moon aria-label="Switch to Dark Mode" />
+      <FaMoon />
     </ToggleButton>
   );
 };
