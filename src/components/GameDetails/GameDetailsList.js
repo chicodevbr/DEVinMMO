@@ -19,7 +19,6 @@ const DetailsList = (props) => {
       image0={items.screenshots && items.screenshots[0].image}
       image1={items.screenshots && items.screenshots[1].image}
       image2={items.screenshots && items.screenshots[2].image}
-      image3={items.screenshots && items.screenshots[3].image}
       description={items.short_description}
       platform={items.platform}
       genre={items.genre}

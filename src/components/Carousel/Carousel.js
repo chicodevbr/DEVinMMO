@@ -1,51 +1,41 @@
 import React from 'react';
 import { Carousel } from 'react-carousel-minimal';
 
-const CarouselGameDetail = (props) => {
-  const data = [
-    {
-      image: props.image0,
-    },
-    {
-      image: props.image1,
-    },
-    {
-      image: props.image2,
-    },
-    {
-      image: props.image3,
-    },
-  ];
-
+const CarouselGame = (props) => {
   const slideNumberStyle = {
     fontSize: '2em',
     fontWeight: 'bold',
   };
+
+  const captionStyle = {
+    fontSize: '2rem',
+    fontWeight: '600',
+    cursor: 'pointer',
+  };
   return (
     <div>
       <Carousel
-        data={data}
+        data={props.data}
         time={5000}
-        width="100%"
-        height="600px"
+        width={props.width}
+        height={props.height}
+        captionStyle={captionStyle}
         radius="5px"
-        slideNumber={true}
+        slideNumber={props.slideNumber}
         slideNumberStyle={slideNumberStyle}
         captionPosition="bottom"
-        automatic={false}
+        automatic={true}
         dots={true}
         pauseIconColor="white"
         pauseIconSize="40px"
         slideBackgroundColor="darkgrey"
         slideImageFit="cover"
-        thumbnails={true}
+        thumbnails={props.thumbnails}
         thumbnailWidth="200px"
-        style={{
-          overflow: 'hidden',
-        }}
+        style={props.style}
       />
     </div>
   );
 };
 
-export default CarouselGameDetail;
+export default CarouselGame;

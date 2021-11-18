@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const DetailsWrap = styled.div`
-  margin: 4rem 1rem;
+  margin: 0 1rem;
 
   @media (min-width: 1145px) {
-    margin: 5rem;
+    margin: 1rem 5rem;
   }
 `;
 
@@ -79,4 +79,9 @@ export const ListDescription = styled.p`
 
 export const TR = styled.tr`
   padding: 0;
+`;
+
+export const TitleDetail = styled.h2`
+  margin-top: 5rem;
+  margin-left: 0;
 `;

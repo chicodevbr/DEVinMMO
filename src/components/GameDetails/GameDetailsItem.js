@@ -1,23 +1,41 @@
 import React from 'react';
 
-import { Content, DetailsWrap, ImageBox } from './GameDetailsItemStyled';
+import {
+  Content,
+  DetailsWrap,
+  ImageBox,
+  TitleDetail,
+} from './GameDetailsItemStyled';
 import { Paragraph, SubTitle } from '../Games/GameItemStyled';
 import RequirementsList from './RequirementsList';
-import CarouselGameDetail from '../Carousel/Carousel';
+import CarouselGame from '../Carousel/Carousel';
 import Comments from '../Comments/Comments';
 
 const DetailsItem = (props) => {
+  const data = [
+    {
+      image: props.image0,
+    },
+    {
+      image: props.image1,
+    },
+    {
+      image: props.image2,
+    },
+  ];
+  const platform = props.platform;
   return (
     <>
       <DetailsWrap>
-        <h1>{props.title}</h1>
+        <TitleDetail>{props.title}</TitleDetail>
 
         <ImageBox>
-          <CarouselGameDetail
-            image0={props.image0}
-            image1={props.image1}
-            image2={props.image2}
-            image3={props.image3}
+          <CarouselGame
+            data={data}
+            width="100%"
+            height="600px"
+            thumbnails={true}
+            slideNumber={true}
           />
         </ImageBox>
 
@@ -32,13 +50,15 @@ const DetailsItem = (props) => {
           {props.description}
         </Content>
 
-        <RequirementsList
-          os={props.os}
-          processor={props.processor}
-          memory={props.memory}
-          graphics={props.graphics}
-          storage={props.storage}
-        />
+        {platform !== 'Web Browser' && (
+          <RequirementsList
+            os={props.os}
+            processor={props.processor}
+            memory={props.memory}
+            graphics={props.graphics}
+            storage={props.storage}
+          />
+        )}
       </DetailsWrap>
       <Comments />
     </>

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import api from '../api/service';
-import Hero from '../components/Hero/Hero';
+import GamesList from '../components/Games/GamesList';
 
-const Home = () => {
+const GamesByPopularity = () => {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
@@ -13,15 +13,11 @@ const Home = () => {
       });
   }, []);
 
-  const [news, setNews] = useState([]);
-
-  useEffect(() => {
-    api.get('latestnews').then((response) => {
-      setNews(response.data);
-    });
-  }, []);
-
-  return <Hero items={games} lastNews={news} />;
+  return (
+    <main>
+      <GamesList items={games} />
+    </main>
+  );
 };
 
-export default Home;
+export default GamesByPopularity;
