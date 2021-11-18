@@ -41,7 +41,7 @@ const Hero = (props) => {
             image1={lastNews[0] && lastNews[0].main_image}
             caption1={`<a href='/news'>News, Updates and Betas</a>`}
             image2={lastNews[1] && lastNews[1].main_image}
-            caption2={`<a href='/news'>Release Dates, Gameplay, Trailers and More...</a>`}
+            caption2={`<a href='/games'>Release Dates, Gameplay, Trailers and More...</a>`}
           />
         </View>
 
