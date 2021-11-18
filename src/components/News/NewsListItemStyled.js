@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
 export const ListItemNews = styled.li`
-  margin: 0.75rem 0;
-  width: 80vw;
+  margin: 1rem 0;
+  width: 90vw;
 
   @media (min-width: 768px) {
     margin: 1rem;
-    width: 30rem;
+    width: 40rem;
   }
   @media (min-width: 1114px) {
     margin: 1rem;
-    width: 25rem;
+    width: 50rem;
   }
 `;
 
