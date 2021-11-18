@@ -14,7 +14,7 @@ const ThemeToggle = (props) => {
       onClick={props.onClick}
       isQuiet
     >
-      <FaMoon />
+      <FaMoon color="white" />
     </ToggleButton>
   );
 };
