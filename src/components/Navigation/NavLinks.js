@@ -14,6 +14,11 @@ const NavLinks = (props) => {
         </NavLink>
       </li>
       <li>
+        <NavLink to="/popularity" onClick={props.onClick}>
+          Popular
+        </NavLink>
+      </li>
+      <li>
         <NavLink to="/news" onClick={props.onClick}>
           Last News
         </NavLink>
