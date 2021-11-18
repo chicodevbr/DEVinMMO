@@ -39,9 +39,9 @@ const Hero = (props) => {
             image0={imgUrl0}
             caption0={`<a href='/popularity'>Most Popular Games</a>`}
             image1={lastNews[0] && lastNews[0].main_image}
-            caption1={`<a href='/news'>${lastNews[0] && lastNews[0].title}</a>`}
+            caption1={`<a href='/news'>News, Updates and Betas</a>`}
             image2={lastNews[1] && lastNews[1].main_image}
-            caption2={`<a href='/news'>${lastNews[1] && lastNews[1].title}</a>`}
+            caption2={`<a href='/news'>Release Dates, Gameplay, Trailers and More...</a>`}
           />
         </View>
 
