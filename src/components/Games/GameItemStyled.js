@@ -67,3 +67,9 @@ export const Image = styled.img`
   object-fit: cover;
   cursor: pointer;
 `;
+
+export const Lista = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;

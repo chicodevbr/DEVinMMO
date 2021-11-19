@@ -5,7 +5,13 @@ import Card from '../UI/Card';
 import Button from '../UI/Button';
 import './button.css';
 
-import { Description, Image, ItemList, TitleGroup } from './GameItemStyled';
+import {
+  Description,
+  Image,
+  ItemList,
+  Lista,
+  TitleGroup,
+} from './GameItemStyled';
 import Platform from './Platform';
 
 const GameItem = (props) => {
@@ -21,9 +27,14 @@ const GameItem = (props) => {
         <Image src={props.thumbnail} alt={props.title} />
 
         <TitleGroup>
-          <h2>{props.title}</h2>
-
-          <Platform platform={props.platform} />
+          <Lista>
+            <li>
+              <h2>{props.title}</h2>
+            </li>
+            <li>
+              <Platform platform={props.platform} />
+            </li>
+          </Lista>
         </TitleGroup>
         <Description>
           <p>{props.short_description} </p>

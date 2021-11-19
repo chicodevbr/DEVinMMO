@@ -40,6 +40,7 @@ const DetailsItem = (props) => {
         </ImageBox>
 
         <SubTitle>Genre</SubTitle>
+
         <Paragraph>{props.genre}</Paragraph>
 
         <SubTitle>Platform</SubTitle>
