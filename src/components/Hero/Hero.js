@@ -95,7 +95,7 @@ const Hero = (props) => {
           <FooterBox>
             <h3 id="wellLabel">Developer by Chico</h3>
             <Link
-              to={{ pathname: 'https://github.com/chicodevbr' }}
+              to={{ pathname: 'https://github.com/chicodevbr/DEVinMMO' }}
               target="_blank"
             >
               <FaGithub color="#772dae" size="1.5rem" />
