@@ -7,11 +7,12 @@ export const PlatformCard = styled.div`
 
 export const ButtonPlatform = styled.button`
   font: inherit;
+  font-weight: 700;
   height: 2rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0.4rem 1.5rem;
   text-transform: uppercase;
   color: #772dae;
-  border: 1px solid;
+  border: 1.5px solid;
   border-color: #772dae;
   border-radius: 15px;
   background: transparent;

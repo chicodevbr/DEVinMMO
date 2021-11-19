@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const CarouselBox = styled.div`
   margin: 4rem 1rem;
+  margin-bottom: 1rem;
 
   @media (min-width: 1145px) {
     margin: 5rem;
+    margin-bottom: 1rem;
   }
 `;
 
