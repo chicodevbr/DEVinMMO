@@ -57,12 +57,15 @@ const Hero = (props) => {
               id0={items[0] && items[0].id}
               title0={items[0] && items[0].title}
               thumbnail0={items[0] && items[0].thumbnail}
+              description0={items[0] && items[0].short_description}
               id1={items[1] && items[1].id}
               title1={items[1] && items[1].title}
               thumbnail1={items[1] && items[1].thumbnail}
+              description1={items[1] && items[1].short_description}
               id2={items[2] && items[2].id}
               title2={items[2] && items[2].title}
               thumbnail2={items[2] && items[2].thumbnail}
+              description2={items[2] && items[2].short_description}
             />
           </Content>
           <Content>
