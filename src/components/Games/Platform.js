@@ -1,20 +1,16 @@
 import React from 'react';
-import { PlatformCard, PlatformParagraph } from './PlatformStyled';
+
+import { ButtonPlatform, PlatformCard } from './PlatformStyled';
 
 const Platform = (props) => {
   return (
-    <React.Fragment>
-      {props.platform === 'PC (Windows)' && (
-        <PlatformCard>
-          <PlatformParagraph>PC</PlatformParagraph>
-        </PlatformCard>
-      )}
-      {props.platform === 'PC (Windows), Web Browser' && (
-        <PlatformCard>
-          <PlatformParagraph>PC/Web</PlatformParagraph>
-        </PlatformCard>
-      )}
-    </React.Fragment>
+    <PlatformCard>
+      {props.platform === 'PC (Windows)' && <ButtonPlatform>PC</ButtonPlatform>}
+      {props.platform === 'PC (Windows), Web Browser' ||
+        (props.platform === 'Web Browser' && (
+          <ButtonPlatform>Web</ButtonPlatform>
+        ))}
+    </PlatformCard>
   );
 };
 

@@ -17,7 +17,9 @@ html{
 
 
 body{
+    
     font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
     font-weight: 300;
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};

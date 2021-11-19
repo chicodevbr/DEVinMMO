@@ -29,6 +29,7 @@ export const TitleGroup = styled.div`
 export const Description = styled.div`
   font-size: 1.2rem;
   padding: 1rem 0.75rem;
+  margin-bottom: 2rem;
   @media (min-width: 768px) {
     height: 19em;
     padding: 1rem;
@@ -68,7 +69,7 @@ export const Image = styled.img`
   cursor: pointer;
 `;
 
-export const Lista = styled.ul`
+export const ListTitle = styled.li`
   display: flex;
   flex-direction: row;
   justify-content: space-between;

@@ -9,7 +9,7 @@ import {
   Description,
   Image,
   ItemList,
-  Lista,
+  ListTitle,
   TitleGroup,
 } from './GameItemStyled';
 import Platform from './Platform';
@@ -26,16 +26,14 @@ const GameItem = (props) => {
       <Card onClick={clickHandler}>
         <Image src={props.thumbnail} alt={props.title} />
 
-        <TitleGroup>
-          <Lista>
-            <li>
-              <h2>{props.title}</h2>
-            </li>
-            <li>
-              <Platform platform={props.platform} />
-            </li>
-          </Lista>
-        </TitleGroup>
+        <ul>
+          <ListTitle>
+            <h3>{props.title}</h3>
+            <Platform platform={props.platform} />
+          </ListTitle>
+        </ul>
+
+        <TitleGroup></TitleGroup>
         <Description>
           <p>{props.short_description} </p>
         </Description>
