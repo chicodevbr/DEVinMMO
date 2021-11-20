@@ -21,8 +21,8 @@ const CarouselHero = (props) => {
     <CarouselBox>
       <CarouselGame
         data={data}
-        width="100%"
-        height="600px"
+        width="800"
+        height="500px"
         thumbnails={false}
         slideNumber={false}
       />
