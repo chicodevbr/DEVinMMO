@@ -13,6 +13,9 @@ export const reducer = (state, action) => {
     case 'DECREMENT':
       return { ...state, data: state.data - action.payload };
 
+    case 'CLEAR':
+      return state;
+
     default:
       return state;
   }

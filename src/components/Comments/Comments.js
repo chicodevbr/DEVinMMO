@@ -95,6 +95,7 @@ const Comments = () => {
               name={data.name}
               date={data.date}
               comment={data.comment}
+              count={data.count}
             />
           ) : null;
         })}

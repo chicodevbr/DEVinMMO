@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import moment from 'moment';
 import { useDataLayerValue } from '../../context/DataLayer';
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
@@ -13,6 +13,14 @@ import {
 
 const DisplayComments = (props) => {
   const [{ data }, dispatch] = useDataLayerValue();
+
+  useEffect(() => {
+    const storage = JSON.parse(localStorage.getItem('comments')) || [];
+    storage[0].count = data;
+    console.log(storage);
+    localStorage.setItem('comments', JSON.stringify(storage));
+  }, [data]);
+
   return (
     <CommentContainer>
       <Paragraph>
@@ -27,7 +35,7 @@ const DisplayComments = (props) => {
           >
             <FaArrowUp />
           </ButtonComment>
-          {data}
+          {props.count}
           <ButtonComment
             onClick={() => dispatch({ type: 'DECREMENT', payload: 1 })}
           >
