@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../api/service';
-import NewsList from '../components/News/NewsList';
+import NewsFinder from '../components/Search/NewsFinder';
 
 const News = () => {
   const [news, setNews] = useState([]);
@@ -13,7 +13,7 @@ const News = () => {
 
   return (
     <main>
-      <NewsList items={news} />
+      <NewsFinder items={news} />
     </main>
   );
 };
